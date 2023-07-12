@@ -1,0 +1,161 @@
+23/07/12 3일차 퀴즈
+
+Nomadcoder JS Challenge
+
+Why do we use functions?
+-> To encapsulate a piece of code.
+
+How can we ‘run’ a function?
+-> We write nameOfFunc + {} : nameOfFunc{} (오답)
+-> We write nameOfFunc + () : nameOfFunc() (정답)
+
+Why do we use ‘arguments’ on functions?
+-> To get a value from a function. (오답)
+-> To send a value to a function. (정답)
+
+Functions can receive maximum 3 arguments.
+-> No
+
+Functions always have to receive arguments.
+-> No
+
+Why do we use ‘return’ on functions?
+-> To get a value from a function
+
+‘return’ is the same as ‘console.log’
+-> No
+
+What is the return value of parseInt("2")?
+-> 2
+
+What is the return value of parseInt("hello")?
+-> NaN
+
+What is ‘NaN’?
+-> Not a Number
+
+With this code
+if(false){
+    console.log("hi")
+}else{
+    console.log("bye")
+}
+what will be printed on the console?
+-> bye
+
+
+With this code
+if(8 > 10){
+    console.log("hi")
+}else if(8 < 10){
+    console.log("hello")
+} else {
+    console.log("bye")
+}
+what will be printed on the console?
+-> hello
+
+
+8 > 5 && 10 > 20 will be?
+-> false
+
+5 > 2 || 10 < 23 will be?
+-> true
+
+false && true will be?
+-> false
+
+true || false will be?
+-> true
+
+
+---------------------------
+
+*오답문제 풀이
+
+1. How can we ‘run’ a function?
+-> We write nameOfFunc + {} : nameOfFunc{} (오답)
+-> We write nameOfFunc + () : nameOfFunc() (정답)
+
+->풀이 :
+
+함수를 실행하기 위해서는 nameOfFunc() 형식을 사용해야 한다. 
+함수 이름 뒤에 괄호 ()를 붙여 함수를 호출하면 실행된다. 
+함수 호출은 함수 정의를 참조하여 해당 함수의 코드 블록을 실행하는 것을 의미한다.
+함수 이름 뒤에 중괄호 {}를 사용하는 것은 올바른 함수 실행 방법이 아니다. 
+중괄호 {}는 함수의 코드 블록을 정의하는 데 사용되는 문법적인 요소이다. 
+함수를 정의할 때 중괄호로 코드 블록을 감싸고, 함수 호출 시에는 괄호 ()를 사용하여 해당 함수를 실행한다.
+
+예를 들어, 다음은 sayHello라는 함수를 실행하는 예시이다:
+function sayHello() {
+  console.log("Hello!");
+}
+
+sayHello(); // 함수를 호출하여 실행
+
+
+함수를 실행하기 위해서는 nameOfFunc() 형식을 사용해야 합니다. 함수 이름 뒤에 괄호 ()를 붙여 함수를 호출하면 실행됩니다. 함수 호출은 함수 정의를 참조하여 해당 함수의 코드 블록을 실행하는 것을 의미합니다.
+
+함수 이름 뒤에 중괄호 {}를 사용하는 것은 올바른 함수 실행 방법이 아닙니다. 중괄호 {}는 함수의 코드 블록을 정의하는 데 사용되는 문법적인 요소입니다. 함수를 정의할 때 중괄호로 코드 블록을 감싸고, 함수 호출 시에는 괄호 ()를 사용하여 해당 함수를 실행합니다.
+
+예를 들어, 다음은 sayHello라는 함수를 실행하는 예시입니다:
+-----------------------
+javascript
+Copy code
+function sayHello() {
+  console.log("Hello!");
+}
+
+sayHello(); // 함수를 호출하여 실행
+----------------------
+
+위의 예시에서 sayHello()는 sayHello 함수를 실행합니다. 함수 호출을 통해 "Hello!"가 출력된다. 
+sayHello 함수는 함수 정의 시에 중괄호로 감싸진 코드 블록을 가지고 있으며, 함수를 호출할 때 ()를 사용하여 해당 코드 블록을 실행한다.
+
+따라서, 함수를 실행하기 위해서는 함수 이름 뒤에 ()를 사용하여 함수 호출을 해야 한다. 
+중괄호 {}는 함수 실행에 직접적으로 관련되지 않는다.
+----------------------------------------------
+----------------------------------------------
+2. Why do we use ‘arguments’ on functions?
+-> To get a value from a function. (오답)
+-> To send a value to a function. (정답)
+
+-> 풀이:
+"To get a value from a function"은 함수에서 값을 얻는 것을 의미한다. 
+이는 함수가 실행된 후 함수 내에서 계산된 결과나 다른 정보를 반환하는 것을 말한다. 
+반환된 값은 함수 호출자에게 전달되어 다른 변수에 할당하거나 다른 연산에 사용될 수 있다. 
+
+예를 들어, 다음은 두 수를 더하는 함수를 호출하고 그 결과를 변수에 할당하는 예시이다:
+-----------------
+function add(a, b) {
+  return a + b;
+}
+
+var sum = add(2, 3); // 함수를 호출하고 반환된 값을 sum 변수에 할당
+console.log(sum); // 출력: 5
+-----------------
+위의 예시에서 add 함수는 인수 a와 b를 받아서 두 수를 더한 값을 반환한다. 
+add(2, 3)을 호출하면 함수가 실행되고 반환된 값인 5가 sum 변수에 할당된다.
+
+"To send a value to a function"은 함수로 값을 전달하는 것을 의미한다. 
+함수는 인수를 받아들이는 매개변수를 가지고 있으며, 이 매개변수를 통해 함수 내에서 사용할 수 있다. 
+함수를 호출할 때 전달된 값들이 매개변수에 할당된다. 
+
+
+예를 들어, 다음은 두 수를 더하는 함수에 인수를 전달하는 예시이다:
+-----------------
+function add(a, b) {
+  return a + b;
+}
+
+var result = add(2, 3); // 함수를 호출하면서 인수를 전달
+console.log(result); // 출력: 5
+-----------------
+위의 예시에서 add 함수는 매개변수 a와 b를 가지고 있다. 
+함수를 호출할 때 add(2, 3)와 같이 인수를 전달하면 인수 값인 2와 3이 a와 b 매개변수에 할당된다. 
+함수 내에서는 전달된 인수를 활용하여 연산을 수행한 후 결과인 5를 반환한다.
+
+따라서, "To get a value from a function"은 함수로부터 값을 얻는 것이며, 
+"To send a value to a function"은 함수로 값을 전달하는 것이다.
+
+
