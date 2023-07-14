@@ -1,0 +1,55 @@
+getElementById : id명으로 값을 가져온다.
+
+querySelector를 이용해 id 값을 가져오려면 document.querySelector("#hello")를 하면 된다.
+
+querySelector : class명으로 첫번째 element를 가져온다.
+
+querySelectorAll : 이 selector 안의 조건에 부합하는 모든 element를 가져다준다.
+
+----------
+const title = document.querySelector("div.hello:first-child h1");
+
+console.dir(title);
+
+function handleTitleClick(){
+    console.log("title was clicked!");
+}
+
+
+
+// title.style.color="blue";       //색깔을 blue로 변경
+title.addEventListener("click", handleTitleClick);
+
+handleTitleClick()
+
+클릭했을 때 콘솔창에 title was clicked!가 출력
+
+------------------------------------------------------------
+const h1 = document.querySelector("div.hello:first-child h1");
+
+console.dir(h1);
+
+function handleTitleClick(){
+    console.log("title was clicked!");
+    h1.style.color =  "blue";    //클릭했을 때 색깔을 blue로 변경
+}
+function handleMouseEnter(){
+    console.log("mouse is here");
+    h1.innerText = "Mouse is here!";
+}
+function handleMouseLeave(){
+    console.log("mouse is gone");
+    h1.innerText = "Mouse is gone!";
+}
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+function handleWindowCopy(){
+    alert("copier !");
+}
+function handleWindowOffline(){
+    alert("SOS no WIFI");
+}
+function handleWindowOnline(){
+    alert("ALL GOOD !");
+}
