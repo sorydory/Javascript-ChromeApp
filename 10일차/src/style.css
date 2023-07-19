@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "WandohopeR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "WandohopeR";
+  text-align: center;
+}
+
+h1 {
+  color: green;
+}
+h2 {
+  color: red;
+}
